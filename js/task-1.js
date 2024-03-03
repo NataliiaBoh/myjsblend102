@@ -1,33 +1,12 @@
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
 
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
 
-function isEnoughCapacity(products, containerSize) {
-    let allProducts = 0;
-    const values = Object.values(products);
-    for (const value of values) {
-        allProducts += value;
-    }
-    if (allProducts <= containerSize) {
-       return true;
-    } else {
-        return false;
-   }
-    
-}
-
-
-
-console.log(
-  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-); // true
-
-console.log(
- isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-); // false
-
-console.log(
- isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
-); // true
-
-console.log(
-  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
-); // false
+console.log(checkBrackets(someFn));
